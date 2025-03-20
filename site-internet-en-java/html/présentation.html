@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation de l'Association Les Restaurants du Coeur</title>
+    <script>
+        alert("Vous allez lire la présentation des Restaurants du Coeur !");
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #d9534f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f1c40f;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #d9534f;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        #clock, #calendar {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Présentation des Restaurants du Coeur</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="galerie.html">Galerie Photo</a>
+        <a href="planning.html">Planning des Événements</a>
+        <a href="inscription.html">Formulaire d'Inscription</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <div id="clock"></div>
+        <div id="calendar"></div>
+
+        <script>
+            function updateDateTime() {
+                var now = new Date();
+                var clockElement = document.getElementById('clock');
+                clockElement.textContent = "Il est " + now.toLocaleTimeString();
+
+                var calendarElement = document.getElementById('calendar');
+                calendarElement.textContent = "Nous sommes le " + now.toLocaleDateString();
+            }
+            setInterval(updateDateTime, 1000);
+            updateDateTime();
+        </script>
+
+        <section>
+            <h2>1. Mission et Objectifs</h2>
+            <p>Les Restaurants du Cœur ont pour mission de lutter contre la pauvreté et l'exclusion sociale en fournissant une aide alimentaire aux personnes en difficulté. Leur objectif principal est d'assurer une distribution de repas équilibrés, mais l'association s'engage également dans d'autres actions sociales pour accompagner les bénéficiaires vers une insertion sociale et professionnelle.</p>
+        </section>
+
+        <section>
+            <h2>2. Historique</h2>
+            <p>L'association a été fondée par l'humoriste Coluche en 1985 à la suite d'une campagne médiatique baptisée "Les Enfoirés". Cette campagne visait à collecter des fonds pour venir en aide aux personnes les plus démunies. Suite à la forte mobilisation du public, Coluche décide de créer Les Restaurants du Cœur.</p>
+        </section>
+
+        <section>
+            <h2>3. Fonctionnement</h2>
+            <p>Les Restaurants du Cœur reposent sur le principe du bénévolat. Des milliers de bénévoles se mobilisent chaque année pour collecter des denrées alimentaires, préparer des repas, et distribuer une aide alimentaire aux personnes en situation de précarité. L'association collabore également avec des entreprises partenaires, des institutions publiques et d'autres associations pour étendre son action.</p>
+        </section>
+
+        <section>
+            <h2>4. Actions menées</h2>
+            <p>Outre la distribution alimentaire, Les Restaurants du Cœur mettent en place des actions pour favoriser l'insertion sociale et professionnelle des bénéficiaires. Cela peut inclure des ateliers de recherche d'emploi, des formations professionnelles, des cours de français, etc.</p>
+        </section>
+
+        <section>
+            <h2>5. Campagne annuelle des Enfoirés</h2>
+            <p>Chaque année, Les Restaurants du Cœur organisent la campagne des Enfoirés, un spectacle caritatif regroupant des artistes et célébrités français. Les recettes générées par ces spectacles contribuent significativement au financement des actions de l'association.</p>
+        </section>
+
+        <section>
+            <h2>6. Financement</h2>
+            <p>Les Restaurants du Cœur dépendent des dons, des legs, des subventions publiques, et des recettes de la campagne des Enfoirés pour financer leurs actions. L'association veille à une gestion transparente des fonds et à une utilisation optimale des ressources pour maximiser son impact social.</p>
+        </section>
+
+        <section>
+            <h2>7. Chiffres clés</h2>
+            <p>L'ampleur de l'action des Restaurants du Cœur est significative. Chaque année, des millions de repas sont distribués à des personnes en difficulté à travers la France. L'association fait face à une demande croissante, soulignant l'importance continue de son rôle dans la société.</p>
+        </section>
+
+        <p>En résumé, Les Restaurants du Cœur jouent un rôle essentiel dans la lutte contre la précarité alimentaire en France. Leur action repose sur la générosité des bénévoles, des donateurs, et des partenaires, démontrant la solidarité de la société française face aux enjeux sociaux.</p>
+
+        <a href="#top">Revenir en haut de la page</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Les Restaurants du Cœur. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

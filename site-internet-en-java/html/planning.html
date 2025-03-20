@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning de l'Association Les Restaurants du Cœur</title>
+    <script>
+        alert("Vous êtes allé voir le planning des événements !");
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #d9534f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f1c40f;
+        }
+
+        h1, h2 {
+            color: #d9534f;
+        }
+
+        .time-slot {
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .time-slot:hover {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        #details {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #clock, #calendar {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .event-details a {
+            color: #d9534f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .event-details a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Planning des événements des Restaurants du Cœur</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="galerie.html">Galerie Photo</a>
+        <a href="planning.html">Planning</a>
+        <a href="inscription.html">Formulaire d'Inscription</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <div id="clock"></div>
+        <div id="calendar"></div>
+
+        <script>
+            function updateDateTime() {
+                var now = new Date();
+                var clockElement = document.getElementById('clock');
+                clockElement.textContent = "Il est " + now.toLocaleTimeString();
+
+                var calendarElement = document.getElementById('calendar');
+                calendarElement.textContent = "Nous sommes le " + now.toLocaleDateString();
+            }
+
+            setInterval(updateDateTime, 1000);
+            updateDateTime();
+        </script>
+
+        <section>
+            <h2>Événements à venir :</h2>
+            <p>Les Restaurants du Cœur organisent plusieurs événements pour soutenir leur mission. Voici le planning des événements à venir :</p>
+        </section>
+
+        <section class="event-details">
+            <h2>Événement Spécial :</h2>
+            <h3><a href="https://www.enfoires.fr/mise-en-vente-enfoires-2024/#:~:text=Pour%20rappel%2C%20les%20concerts%20auront,au%2022%20janvier%202024%20inclus">BILLETERIE DU CONCERT DES ENFOIRÉS</a></h3>
+            <p>Du 17 au 22 janvier 2024, la billetterie est officiellement ouverte depuis le 17 octobre 2023 à 10h.</p>
+        </section>
+
+        <section>
+            <h2>Planning Hebdomadaire des Événements</h2>
+
+            <div class="time-slot" onclick="showDetails('8:00-10:00',  'Réception des équipes 2 et 3 et préparation de l\'inventaire des aliments pour la préparation des plats')">8:00-10:00</div>
+            <div class="time-slot" onclick="showDetails('10:00-12:00', 'Mise en place des stands par l\'équipe 2 et préparation des plats par l\'équipe 3')">10:00-12:00</div>
+            <div class="time-slot" onclick="showDetails('12:00-14:00', 'Dons des plats par les deux équipes')">12:00-14:00</div>
+            <div class="time-slot" onclick="showDetails('14:00-16:00', 'Discussion avec des personnes dans le besoin')">14:00-16:00</div>
+            <div class="time-slot" onclick="showDetails('16:00-18:00', 'Rangement des plats et des déchets autour des stands')">16:00-18:00</div>
+            <div class="time-slot" onclick="showDetails('18:00-20:00', 'Préparation des plats par les équipes 2 et 3')">18:00-20:00</div>
+            <div class="time-slot" onclick="showDetails('20:00-22:00', 'Dons des plats par les deux équipes')">20:00-22:00</div>
+            <div class="time-slot" onclick="showDetails('22:00-00:00', 'Rangement des plats, des déchets et des stands')">22:00-00:00</div>
+
+            <div id="details"></div>
+
+            <script>
+                function showDetails(time, activity) {
+                    var detailsElement = document.getElementById('details');
+                    detailsElement.innerHTML = '<h2>Détails</h2>' +
+                        '<p><strong>Heure :</strong> ' + time + '</p>' +
+                        '<p><strong>Activité :</strong> ' + activity + '</p>';
+                }
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Les Restaurants du Cœur. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body { background-image: url("imagedefond.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+}
+h1{
+	color:black
+}
+ .titre {    /* sélecteur  */
+ font-size:big;    /*propriété : valeur */
+ text-align:center;
+ color:black;
+ }
+
+
+ h2{
+	color:white
+}
+
+ul {
+            list-style-type: ellipsis;
+            padding: 0;
+            display: flex; /* Pour aligner les boutons horizontalement */
+        }
+
+        li {
+            margin: 100px; /* Marge entre les boutons */
+        }
+
+        a {
+            text-decoration: ellipsis;
+            display: inline-block;
+            padding: 10px 20px; /* Ajustez la taille du bouton */
+            background-color: white; /* Couleur de fond du bouton */
+            color: black; /* Couleur du texte du bouton */
+            border: 1px solid white; /* Bordure du bouton */
+            border-radius: 5px; /* Coins arrondis du bouton */
+position:top;
+        }
+h5 {
+	color: white
+}
+footer {
+    background-color: #333; /* Couleur de fond du pied de page */
+    color: #fff; /* Couleur du texte */
+    text-align: center; /* Centre le texte */
+    padding: 10px; /* Espace intérieur pour l'élément footer */
+}
+
+p {
+    font-size: 14px; /* Taille de police */
+}

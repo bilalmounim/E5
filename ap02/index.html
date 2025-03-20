@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Connexion</title>
+    <style>
+        /* Style global */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #43436b);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #222;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #f1c40f;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: #f1c40f;
+            color: #333;
+            transform: scale(1.05);
+        }
+
+        /* Main content */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        main a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        main a:hover {
+            color: #ffa502;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            
+        }
+    </style>
+        <nav>
+            <ul>
+                <li><a href="http://localhost/exo/formation%20web/AP0/dossier%20portfolio/Portfolio.html">Accueil</a></li>
+            </ul>
+        </nav>
+</head>
+<body>
+    <!-- Bouton Home -->
+    <!---<button class="home-button" onclick="window.location.href='Portfolio.html'>🏠</button>
+
+    <!-- Formulaire de Connexion -->
+    <div id="login-container" class="container">
+        <h2>Connexion</h2>
+        <form id="login-form" onsubmit="handleLogin(event)">
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" required>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Se connecter</button>
+        </form>
+    </div>
+
+    <!-- Conteneur Patron -->
+    <div id="patron-container" class="container hidden">
+        <h2>Bienvenue Patron</h2>
+        <p>Vous avez accès à toutes les fonctionnalités.</p>
+        <button onclick="logout()">Se déconnecter</button>
+    </div>
+
+    <!-- Conteneur Salarié -->
+    <div id="salarie-container" class="container hidden">
+        <h2>Bienvenue Salarié</h2>
+        <p>Vous avez accès à la page du client.</p>
+        <button onclick="showClientPage()">Accéder à la page du client</button>
+        <button onclick="logout()">Se déconnecter</button>
+    </div>
+
+    <!-- Conteneur Client -->
+    <div id="client-container" class="container hidden">
+        <h2>Bienvenue Client</h2>
+        <p>Vous avez accès à votre page personnelle.</p>
+        <button onclick="logout()">Se déconnecter</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

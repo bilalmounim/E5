@@ -1,0 +1,59 @@
+body {
+    background: url("../galerie/les-restos-du-coeur.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+h1 {
+    color: pink;
+}
+
+.titre {
+    font-size: 24px; 
+    text-align: center;
+    color:pink;
+}
+
+h2 {
+    color: green;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin: 10px; 
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid #0055DD;
+    border-radius: 5px;
+}
+
+h5 {
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+p {
+    font-size: 14px;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Restaurants du Coeur - Accueil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #d9534f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f1c40f;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        #clock, #calendar {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenue sur le site des Restaurants du Coeur</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="http://localhost/exo/formation%20web/AP0/dossier%20portfolio/Portfolio.html">Accueil</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="présentation.html">Présentation</a>
+        <a href="galerie.html">Galerie Photo</a>
+        <a href="planning.html">Planning des Événements</a>
+        <a href="inscription.html">Formulaire d'Inscription</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Introduction</h2>
+        <p>Les Restaurants du Coeur sont une association à but non lucratif qui fournit des repas gratuits aux personnes en difficulté. Notre mission est de venir en aide à ceux qui en ont besoin.</p>
+        
+        <div id="clock"></div>
+        <div id="calendar"></div>
+
+        <script>
+            function updateDateTime() {
+                var now = new Date();
+
+                var clockElement = document.getElementById('clock');
+                clockElement.textContent = "Il est " + now.toLocaleTimeString();
+
+                var calendarElement = document.getElementById('calendar');
+                calendarElement.textContent = "Nous sommes le " + now.toLocaleDateString();
+            }
+
+            setInterval(updateDateTime, 1000);
+            updateDateTime();
+        </script>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Les Restaurants du Coeur. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

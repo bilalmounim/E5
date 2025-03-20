@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie de l'Association les Restaurants du Coeur</title>
+    <script>
+        alert("Vous êtes dans la galerie !");
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f3f4f7, #c5c6d0);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #444;
+            color: #fff;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background: #f1c40f;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .thumbnail {
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            background: #444;
+            color: #fff;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        #clock, #calendar {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galerie de l'Association les Restaurants du Coeur</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="présentation.html">Présentation des Restaurants du Coeur</a>
+        <a href="galerie.html">Galerie photos</a>
+        <a href="planning.html">Planning des événements</a>
+        <a href="inscription.html">Formulaire d'inscription</a>
+        <a href="contact.html">Formulaire de contact</a>
+    </nav>
+
+    <div id="clock"></div>
+    <div id="calendar"></div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('clock').textContent = "Il est " + now.toLocaleTimeString();
+            document.getElementById('calendar').textContent = "Nous sommes le " + now.toLocaleDateString();
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+
+    <main>
+        <div class="image-container">
+            <img src="../galerie/coluche.jpg" alt="Coluche" class="thumbnail" onclick="afficherEnGrand('../galerie/coluche.jpg')">
+            <img src="../galerie/concert.jpg" alt="Concert" class="thumbnail" onclick="afficherEnGrand('../galerie/concert.jpg')">
+            <img src="../galerie/en-action.jpg" alt="En action" class="thumbnail" onclick="afficherEnGrand('../galerie/en-action.jpg')">
+        </div>
+    </main>
+
+    <script>
+        function afficherEnGrand(src) {
+            window.open(src, '_blank');
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2023 by BILAL MOUNIM</p>
+    </footer>
+</body>
+</html>

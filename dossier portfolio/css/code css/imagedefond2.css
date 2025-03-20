@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>iPhone 13 - Présentation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assurez-vous d'avoir un fichier CSS approprié -->
+</head>
+<body>
+    <header>
+        <h1>iPhone 13</h1>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>L'iPhone 13 est le dernier smartphone d'Apple, connu pour ses performances de pointe, son superbe écran et son appareil photo amélioré.</p>
+        </section>
+
+        <section id="caracteristiques">
+            <h2>Caractéristiques</h2>
+            <ul>
+                <li>Processeur : Puce A15 Bionic</li>
+                <li>Écran : OLED Super Retina XDR de 6,1 pouces</li>
+                <li>Caméras : Système de caméra double, caméra frontale TrueDepth</li>
+                <li>Stockage : Disponible en plusieurs capacités (128 Go, 256 Go, 512 Go)</li>
+                <li>Système d'exploitation : iOS (à la date de ma dernière mise à jour en septembre 2021)</li>
+                <li>Connectivité : 5G, Wi-Fi 6, Bluetooth 5.0, NFC</li>
+                <li>Batterie : Autonomie améliorée</li>
+                <li>Design : Boîtier en verre et en aluminium, plusieurs finitions et couleurs</li>
+            </ul>
+        </section>
+
+        <section id="image">
+            <h2>Image</h2>
+            <img src="iphone13.jpg" alt="iPhone 13">
+        </section>
+
+        <section id="securite">
+            <h2>Sécurité</h2>
+            <p>L'iPhone 13 utilise la reconnaissance faciale Face ID pour garantir un déverrouillage sécurisé.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Votre Nom. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

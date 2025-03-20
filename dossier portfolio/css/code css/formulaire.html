@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #f4a261;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #f1faee;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"] {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        input[type="submit"] {
+            background: #f4a261;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: #e76f51;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formulaire de Contact</h1>
+        <form action="#" method="post">
+            <label for="nom">Nom :</label>
+            <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+            
+            <label for="prenom">Prénom :</label>
+            <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required>
+            
+            <label for="email">Email (obligatoire) :</label>
+            <input type="email" name="email" id="email" placeholder="exemple@domaine.com" required>
+            
+            <label for="tel">Numéro de téléphone (obligatoire) :</label>
+            <input type="tel" name="tel" id="tel" placeholder="06 12 34 56 78" required>
+            
+            <label for="message">Message :</label>
+            <textarea name="message" id="message" placeholder="Votre message" required></textarea>
+            
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
+</body>
+</html>
